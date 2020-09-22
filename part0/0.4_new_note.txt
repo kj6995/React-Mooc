@@ -1,0 +1,25 @@
+
+browser-> server:  HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over server:
+the new data object received from browser along with server DateTime is added to the notes array and redirect response is sent to the broswer
+
+server--> browser: HTTP status code 302 along with Location:/notes for redirection 
+
+note over browser:
+send a new HTTP GET request to the https://studies.cs.helsinki.fi/exampleapp/notes
+
+browser-> server:  HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{content: "123", date: "2020-09-22T10:40:22.152Z"},…]

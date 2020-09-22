@@ -1,0 +1,5 @@
+
+browser-> server:  HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+the new data object received from browser along with server DateTime is added to the notes array and it modifies the JSX code to add the object in the list and the rendered data is displayed on the browser
